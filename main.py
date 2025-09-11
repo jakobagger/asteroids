@@ -39,11 +39,11 @@ def main():
                 print("You hit an asteroid!")
                 sys.exit("GAME OVER!")
 
-        for ast in asteroids:
+        for ast in asteroids:  
             for shot in shots:
                 if ast.is_colliding_with(shot):
                     shot.kill()
-                    ast.kill()
+                    ast.split()
         
         for obj in drawable:
             obj.draw(screen)
